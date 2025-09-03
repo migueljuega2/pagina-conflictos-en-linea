@@ -1,0 +1,245 @@
+/* Importación de fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap');
+
+/* Reset básico y estilos generales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #212529;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Encabezado y Sección Hero */
+.hero {
+    background: #343a40 url('https://via.placeholder.com/1920x1080.png?text=Fondo+profesional') no-repeat center center/cover; /* Reemplaza con una imagen de fondo de alta calidad si la tienes */
+    color: white;
+    text-align: center;
+    padding: 6em 1em;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 1.5em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.8em 2em;
+    border-radius: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos de secciones */
+main {
+    max-width: 1200px;
+    margin: 3em auto;
+    padding: 0 1em;
+}
+
+.section-card {
+    background-color: white;
+    padding: 3em;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2em;
+}
+
+.section-card h2, .section-pasos h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1em;
+    position: relative;
+    padding-bottom: 0.5em;
+}
+
+.section-card h2::after, .section-pasos h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #6c757d;
+}
+
+/* Grillas y tarjetas */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+}
+
+.card {
+    background-color: #f8f9fa;
+    border-left: 5px solid #007bff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #007bff;
+}
+
+/* Estilos de Pasos */
+.pasos-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    text-align: center;
+}
+
+.paso-item {
+    flex: 1;
+    max-width: 300px;
+}
+
+.paso-numero {
+    display: inline-block;
+    font-size: 2.5em;
+    color: #007bff;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+/* Estilos de Recursos */
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    text-align: center;
+}
+
+.recurso-link {
+    background-color: #e9ecef;
+    padding: 1em;
+    border-radius: 8px;
+    color: #343a40;
+    transition: background-color 0.3s ease;
+}
+
+.recurso-link:hover {
+    background-color: #dee2e6;
+}
+
+/* Pie de página */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 2em 1em;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+.footer-links a {
+    color: white;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Nuevos estilos para imágenes */
+.image-container {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .section-card, .section-pasos {
+        padding: 2em;
+    }
+}
